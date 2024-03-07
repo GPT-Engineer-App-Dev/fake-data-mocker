@@ -8,7 +8,6 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Index />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }
