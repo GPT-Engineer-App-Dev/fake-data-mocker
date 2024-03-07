@@ -52,13 +52,6 @@ const Index = () => {
           </ListItem>
         ))}
       </List>
-      <Box as="footer" w="full" py={5} borderTop="1px" borderColor="gray.200">
-        <Container>
-          <Text align="center" fontSize="sm">
-            © 2024 Todo App. All rights reserved.
-          </Text>
-        </Container>
-      </Box>
     </VStack>
   );
 };
