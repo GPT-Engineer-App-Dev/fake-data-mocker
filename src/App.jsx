@@ -11,7 +11,6 @@ function App() {
           <Route exact path="/" element={<Index />} />
         </Routes>
       </Box>
-      <Footer />
     </Router>
   );
 }
