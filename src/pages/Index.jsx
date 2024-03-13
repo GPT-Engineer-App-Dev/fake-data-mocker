@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
-import { Box, Heading, Input, List, ListItem, VStack, HStack, IconButton, useToast, Text, Container } from "@chakra-ui/react";
+import { Box, Heading, Input, List, ListItem, VStack, HStack, IconButton, Button, useToast } from "@chakra-ui/react";
 import { FaPlus, FaTrash } from "react-icons/fa";
 
 const Index = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [showFooter, setShowFooter] = useState(true);
   const toast = useToast();
 
   const handleInputChange = (e) => setInputValue(e.target.value);
@@ -36,26 +37,24 @@ const Index = () => {
     }
   };
 
+  const toggleFooter = () => setShowFooter(!showFooter);
+
   return (
     <VStack p={8} boxShadow="xl" bg="white" borderRadius="lg">
-      <Heading mb="8" color="brand.700">
+      <Heading mb="4" color="brand.700">
         Todo App
       </Heading>
       <HStack>
         <Input value={inputValue} onChange={handleInputChange} onKeyPress={handleKeyPress} placeholder="Add a new task..." />
         <IconButton icon={<FaPlus />} onClick={addTodo} colorScheme="blue" aria-label="Add todo" mx={1} />
       </HStack>
+      <Button onClick={toggleFooter} colorScheme="blue" size="sm" mb="4">
+        {showFooter ? "Hide Footer" : "Show Footer"}
+      </Button>
       <List spacing={3} my={5} w="100%">
-        {todos.map((todo, index) => (
-          <ListItem key={index} p={4} bg="brand.100" borderRadius="md" _hover={{ bg: "brand.200" }}>
-            <HStack justify="space-between">
-              <Box>{todo}</Box>
-              <IconButton icon={<FaTrash />} onClick={() => deleteTodo(index)} colorScheme="red" aria-label="Delete todo" />
-            </HStack>
-          </ListItem>
-        ))}
+        {}
       </List>
-      <Footer />
+      {showFooter && <Footer />}
     </VStack>
   );
 };
