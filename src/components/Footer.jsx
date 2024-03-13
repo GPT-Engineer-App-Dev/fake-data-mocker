@@ -1,13 +1,14 @@
+import React from "react";
 import { Box, Container, Text } from "@chakra-ui/react";
 
-function Footer() {
+const Footer = () => {
   return (
-    <Box as="footer" py="5" borderTop="1px" borderColor="gray.200">
-      <Container maxW="container.md" textAlign="center">
-        <Text fontSize="sm">&copy; {new Date().getFullYear()} My Website. All rights reserved.</Text>
+    <Box as="footer" bg="gray.200" color="gray.700" py={4}>
+      <Container>
+        <Text align="center">&copy; {new Date().getFullYear()} My Website</Text>
       </Container>
     </Box>
   );
-}
+};
 
 export default Footer;
