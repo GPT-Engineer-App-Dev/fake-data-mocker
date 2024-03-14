@@ -46,7 +46,12 @@ const Index = () => {
         <IconButton icon={<FaPlus />} onClick={addTodo} colorScheme="blue" aria-label="Add todo" mx={1} />
       </HStack>
       <List spacing={3} my={5} w="100%">
-        {}
+        {todos.map((todo, index) => (
+          <ListItem key={index} d="flex" justifyContent="space-between" alignItems="center">
+            {todo}
+            <IconButton icon={<FaTrash />} onClick={() => deleteTodo(index)} colorScheme="red" aria-label="Delete todo" />
+          </ListItem>
+        ))}
       </List>
     </VStack>
   );
