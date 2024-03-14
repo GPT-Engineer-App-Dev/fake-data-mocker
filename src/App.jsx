@@ -5,9 +5,16 @@ import { Box, Button } from "@chakra-ui/react";
 import Footer from "./components/Footer";
 
 function App() {
-  const [showFooter, setShowFooter] = useState(true);
+  const [showFooter, setShowFooter] = useState(() => {
+    const isFooterVisible = localStorage.getItem("showFooter") === "true";
+    return isFooterVisible;
+  });
 
-  const toggleFooter = () => setShowFooter(!showFooter);
+  const toggleFooter = () => {
+    const newShowFooter = !showFooter;
+    localStorage.setItem("showFooter", newShowFooter.toString());
+    setShowFooter(newShowFooter);
+  };
 
   return (
     <Router>
