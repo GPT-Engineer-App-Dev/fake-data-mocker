@@ -14,7 +14,9 @@ function App() {
   return (
     <Router>
       <Box as="main" pb={8}>
-        {}
+        <Button onClick={toggleFooter} m={4}>
+          {showFooter ? "Hide" : "Show"} Footer
+        </Button>
         <Navigation />
         <Routes>
           <Route exact path="/" element={<Index />} />
