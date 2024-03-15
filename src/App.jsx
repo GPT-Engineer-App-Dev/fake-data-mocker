@@ -21,6 +21,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          
         </Routes>
         {showFooter && <Footer />}
       </Box>
