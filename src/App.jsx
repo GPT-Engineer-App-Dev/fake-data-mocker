@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index.jsx";
+import About from "./pages/About.jsx";
+import Navigation from "./components/Navigation.jsx";
 import { Box, Button } from "@chakra-ui/react";
 import Footer from "./components/Footer";
 
@@ -15,8 +17,10 @@ function App() {
         <Button onClick={toggleFooter} m={4}>
           {showFooter ? "Hide" : "Show"} Footer
         </Button>
+        <Navigation />
         <Routes>
           <Route exact path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         {showFooter && <Footer />}
       </Box>
