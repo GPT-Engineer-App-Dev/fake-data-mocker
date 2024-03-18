@@ -14,14 +14,13 @@ function App() {
   return (
     <Router>
       <Box as="main" pb={8}>
-        <Button onClick={toggleFooter} m={4}>
-          {showFooter ? "Hide" : "Show"} Footer
+        <Button onClick={toggleFooter} m={4} colorScheme="blue" variant="outline">
+          {showFooter ? "Hide Footer" : "Show Footer"}
         </Button>
         <Navigation />
         <Routes>
           <Route exact path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          
         </Routes>
         {showFooter && <Footer />}
       </Box>
