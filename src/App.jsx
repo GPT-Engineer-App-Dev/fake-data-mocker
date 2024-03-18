@@ -4,7 +4,7 @@ import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
 import Navigation from "./components/Navigation.jsx";
 import { Box, Button } from "@chakra-ui/react";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   const [showFooter, setShowFooter] = useState(true);
@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
         </Routes>
-        {}
+        {showFooter && <Footer />}
       </Box>
     </Router>
   );
