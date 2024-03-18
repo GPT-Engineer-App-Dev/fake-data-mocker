@@ -4,7 +4,7 @@ import { Box, Text } from "@chakra-ui/react";
 const Contact = () => {
   return (
     <Box p={4}>
-      <Text fontSize="xl">Welcome to the Contact page!</Text>
+      <Text fontSize="xl">Contact us at: info@example.com</Text>
     </Box>
   );
 };

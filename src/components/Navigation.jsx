@@ -11,7 +11,7 @@ const Navigation = () => {
       <Button as={Link} to="/about" m={2}>
         About
       </Button>
-      <Button as={Link} to="/contact" m={2}>
+      <Button as={Link} to="/contact" m={2} colorScheme="blue">
         Contact
       </Button>
     </Box>
