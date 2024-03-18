@@ -14,8 +14,8 @@ function App() {
   return (
     <Router>
       <Box as="main" pb={8}>
-        <Button onClick={toggleFooter} m={4} colorScheme="blue" variant="outline">
-          {showFooter ? "Hide Footer" : "Show Footer"}
+        <Button onClick={toggleFooter} m={4} colorScheme="blue" variant="solid">
+          {showFooter ? "Hide Footer Section" : "Show Footer Section"}
         </Button>
         <Navigation />
         <Routes>
