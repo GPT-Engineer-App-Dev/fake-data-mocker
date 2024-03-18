@@ -8,23 +8,15 @@ import { Box, Button } from "@chakra-ui/react";
 import Footer from "./components/Footer";
 
 function App() {
-  const [showFooter, setShowFooter] = useState(true);
-
-  const toggleFooter = () => setShowFooter(!showFooter);
-
   return (
     <Router>
       <Box as="main" pb={8}>
-        <Button onClick={toggleFooter} m={4} colorScheme="blue" variant="solid">
-          {showFooter ? "Hide Footer Section" : "Show Footer Section"}
-        </Button>
         <Navigation />
         <Routes>
           <Route exact path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        {showFooter && <Footer />}
       </Box>
     </Router>
   );
