@@ -6,6 +6,8 @@ import About from "./pages/About.jsx";
 import Navigation from "./components/Navigation.jsx";
 import { Box, Button } from "@chakra-ui/react";
 import Footer from "./components/Footer";
+const [showFooter, setShowFooter] = useState(true);
+const toggleFooter = () => setShowFooter(!showFooter);
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Button onClick={toggleFooter}>{showFooter ? "Hide" : "Show"} Footer</Button>
       </Box>
+      {showFooter && <Footer />}
     </Router>
   );
 }
