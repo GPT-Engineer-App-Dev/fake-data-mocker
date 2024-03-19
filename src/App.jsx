@@ -9,7 +9,26 @@ import Footer from "./components/Footer";
 // These lines were removed, as they should be inside the App component.
 
 function App() {
-  // The rest of the component remains the same.
+  const [showFooter, setShowFooter] = useState(true);
+
+  const toggleFooter = () => setShowFooter(!showFooter);
+
+  return (
+    <Router>
+      <Box>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        {showFooter && <Footer />}
+        <Button onClick={toggleFooter} m={4}>
+          {showFooter ? "Hide Footer" : "Show Footer"}
+        </Button>
+      </Box>
+    </Router>
+  );
 }
 
 export default App;
