@@ -11,8 +11,11 @@ const Navigation = () => {
       <Button as={Link} to="/about" m={2}>
         About
       </Button>
-      <Button as={Link} to="/contact" m={2} colorScheme="blue">
+      <Button as={Link} to="/contact" m={2}>
         Contact
+      </Button>
+      <Button as={Link} to="/services" m={2} colorScheme="blue">
+        Services
       </Button>
     </Box>
   );
