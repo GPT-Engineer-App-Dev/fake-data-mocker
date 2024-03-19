@@ -23,7 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         {showFooter && <Footer />}
-        <Button onClick={toggleFooter} m={4}>
+        <Button onClick={toggleFooter} m={4} colorScheme={showFooter ? "red" : "green"}>
           {showFooter ? "Hide Footer" : "Show Footer"}
         </Button>
       </Box>
