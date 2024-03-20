@@ -11,19 +11,28 @@ import Footer from "./components/Footer";
 function App() {
   // Code related to showFooter state and toggleFooter function has been removed.
 
-  return (
-    <Router>
-      <Box>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </Box>
-    </Router>
-  );
+  return function App() {
+    const [showFooter, setShowFooter] = useState(true);
+
+    const toggleFooter = () => setShowFooter(!showFooter);
+
+    return (
+      <Router>
+        <Box>
+          <Navigation />
+          <Button onClick={toggleFooter} m={4}>
+            {showFooter ? "Hide Footer" : "Show Footer"}
+          </Button>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          {showFooter && <Footer />}
+        </Box>
+      </Router>
+    );
+  };
 }
 
 export default App;
