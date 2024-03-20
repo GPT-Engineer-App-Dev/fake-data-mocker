@@ -9,9 +9,7 @@ import Footer from "./components/Footer";
 // These lines were removed, as they should be inside the App component.
 
 function App() {
-  const [showFooter, setShowFooter] = useState(true);
-
-  const toggleFooter = () => setShowFooter(!showFooter);
+  // Code related to showFooter state and toggleFooter function has been removed.
 
   return (
     <Router>
@@ -22,10 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        {showFooter && <Footer />}
-        <Button onClick={toggleFooter} m={4} colorScheme={showFooter ? "purple" : "teal"} size="lg" w="full">
-          {showFooter ? "Hide Footer" : "Show Footer"}
-        </Button>
+        {}
       </Box>
     </Router>
   );
