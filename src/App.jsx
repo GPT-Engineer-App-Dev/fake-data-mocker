@@ -11,7 +11,9 @@ import Footer from "./components/Footer";
 function App() {
   // Code related to showFooter state and toggleFooter function has been removed.
 
-  const showFooter = true;
+  const [showFooter, setShowFooter] = useState(true);
+
+  const toggleFooter = () => setShowFooter(!showFooter);
 
   return (
     <Router>
