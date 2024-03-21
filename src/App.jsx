@@ -6,7 +6,6 @@ import About from "./pages/About.jsx";
 import Navigation from "./components/Navigation.jsx";
 import { Box, Button } from "@chakra-ui/react";
 import Footer from "./components/Footer.jsx";
-// The import for Footer has been removed.
 
 function App() {
   const [showFooter, setShowFooter] = useState(false);
