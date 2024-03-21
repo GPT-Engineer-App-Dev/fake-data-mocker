@@ -14,9 +14,11 @@ const Navigation = () => {
       <Button as={Link} to="/contact" m={2}>
         Contact
       </Button>
-      <Button as={Link} to="/services" m={2} colorScheme={window.location.pathname === "/services" ? "blue" : "gray"}>
+      {}
+      <Button as={Link} to="/services" m={2}>
         Services
       </Button>
+      {}
     </Box>
   );
 };
