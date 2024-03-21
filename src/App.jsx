@@ -4,28 +4,18 @@ import Contact from "./pages/Contact.jsx";
 import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
 import Navigation from "./components/Navigation.jsx";
-import { Box, Button } from "@chakra-ui/react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import Footer from "./components/Footer.jsx";
+import { Box } from "@chakra-ui/react";
 
 function App() {
-  const [showFooter, setShowFooter] = useState(false);
-
-  const toggleFooter = () => setShowFooter(!showFooter);
-
   return (
     <Router>
       <Box>
         <Navigation />
-        <Button onClick={toggleFooter} leftIcon={showFooter ? <FaChevronDown /> : <FaChevronUp />}>
-          {showFooter ? "Hide Site Footer" : "Show Site Footer"}
-        </Button>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        {showFooter && <Footer />}
       </Box>
     </Router>
   );
