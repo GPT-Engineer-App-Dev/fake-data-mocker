@@ -5,6 +5,7 @@ import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
 import Navigation from "./components/Navigation.jsx";
 import { Box } from "@chakra-ui/react";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </Box>
     </Router>
   );
