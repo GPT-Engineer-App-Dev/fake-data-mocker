@@ -19,7 +19,7 @@ function App() {
       <Box>
         <Navigation />
         <Button onClick={toggleFooter} m={4}>
-          {showFooter ? "Hide Footer" : "Show Footer"}
+          Toggle Footer Visibility
         </Button>
         <Routes>
           <Route path="/" element={<Index />} />
