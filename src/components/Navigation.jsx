@@ -14,7 +14,7 @@ const Navigation = () => {
       <Button as={Link} to="/contact" m={2}>
         Contact
       </Button>
-      <Button as={Link} to="/services" m={2} colorScheme="blue">
+      <Button as={Link} to="/services" m={2} colorScheme={window.location.pathname === "/services" ? "blue" : "gray"}>
         Services
       </Button>
     </Box>
