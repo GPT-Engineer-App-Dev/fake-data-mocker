@@ -9,7 +9,7 @@ import Footer from "./components/Footer.jsx";
 // The import for Footer has been removed.
 
 function App() {
-  const [showFooter, setShowFooter] = useState(true);
+  const [showFooter, setShowFooter] = useState(false);
 
   const toggleFooter = () => setShowFooter(!showFooter);
 
