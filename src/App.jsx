@@ -5,8 +5,7 @@ import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
 import Navigation from "./components/Navigation.jsx";
 import { Box } from "@chakra-ui/react";
-import Footer from "./components/Footer";
-// These lines were removed, as they should be inside the App component.
+// The import for Footer has been removed.
 
 function App() {
   return (
@@ -19,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
+        {}
       </Box>
     </Router>
   );
