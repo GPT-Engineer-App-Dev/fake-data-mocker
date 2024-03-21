@@ -5,6 +5,7 @@ import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
 import Navigation from "./components/Navigation.jsx";
 import { Box, Button } from "@chakra-ui/react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Footer from "./components/Footer.jsx";
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
     <Router>
       <Box>
         <Navigation />
-        <Button onClick={toggleFooter}>{showFooter ? "Hide Footer" : "Show Footer"}</Button>
+        <Button onClick={toggleFooter} leftIcon={showFooter ? <FaChevronDown /> : <FaChevronUp />}>
+          {showFooter ? "Hide Site Footer" : "Show Site Footer"}
+        </Button>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
