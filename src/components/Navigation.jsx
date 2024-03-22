@@ -14,6 +14,9 @@ const Navigation = ({ onToggleFooter }) => {
       <Button as={Link} to="/contact" m={2}>
         Contact
       </Button>
+      <Button as={Link} to="/services" m={2}>
+        Services
+      </Button>
       <Button onClick={onToggleFooter} m={2}>
         Toggle Footer
       </Button>

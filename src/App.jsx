@@ -18,12 +18,10 @@ function App() {
     <Router>
       <Box>
         <Navigation onToggleFooter={toggleFooter} />
-        {}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {}
         </Routes>
         {showFooter && <Footer />}
       </Box>
