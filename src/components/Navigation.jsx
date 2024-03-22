@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Box, Button } from "@chakra-ui/react";
 
-const Navigation = () => {
+const Navigation = ({ onToggleFooter }) => {
   return (
     <Box p={4}>
       <Button as={Link} to="/" m={2}>
@@ -14,11 +14,9 @@ const Navigation = () => {
       <Button as={Link} to="/contact" m={2}>
         Contact
       </Button>
-      {}
-      <Button as={Link} to="/services" m={2}>
-        Services
+      <Button onClick={onToggleFooter} m={2}>
+        Toggle Footer
       </Button>
-      {}
     </Box>
   );
 };

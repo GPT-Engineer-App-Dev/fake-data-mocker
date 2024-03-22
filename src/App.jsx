@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <Box>
-        <Navigation toggleFooter={toggleFooter} />
+        <Navigation onToggleFooter={toggleFooter} />
         {}
         <Routes>
           <Route path="/" element={<Index />} />
