@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Contact from "./pages/Contact.jsx";
 import Index from "./pages/Index.jsx";
@@ -11,6 +11,11 @@ import Footer from "./components/Footer.jsx";
 // Removed import of Button since it's no longer used directly in this file.
 
 function App() {
+  useEffect(() => {
+    const toggleListener = () => setShowFooter((prev) => !prev);
+    window.addEventListener("toggleFooter", toggleListener);
+    return () => window.removeEventListener("toggleFooter", toggleListener);
+  }, []);
   const [showFooter, setShowFooter] = useState(true);
 
   const toggleFooter = () => setShowFooter(!showFooter);
