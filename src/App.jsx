@@ -11,26 +11,17 @@ import Footer from "./components/Footer.jsx";
 // Removed import of Button since it's no longer used directly in this file.
 
 function App() {
-  useEffect(() => {
-    const toggleListener = () => setShowFooter((prev) => !prev);
-    window.addEventListener("toggleFooter", toggleListener);
-    return () => window.removeEventListener("toggleFooter", toggleListener);
-  }, []);
-  const [showFooter, setShowFooter] = useState(true);
-
-  const toggleFooter = () => setShowFooter(!showFooter);
-
   return (
     <Router>
       <Box>
-        <Navigation onToggleFooter={toggleFooter} />
+        <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
         </Routes>
-        {showFooter && <Footer />}
+        <Footer />
       </Box>
     </Router>
   );

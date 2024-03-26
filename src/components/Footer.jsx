@@ -8,9 +8,6 @@ const Footer = () => {
         <Text align="center" mb={2}>
           &copy; {new Date().getFullYear()} My Website
         </Text>
-        <Button size="sm" onClick={() => window.dispatchEvent(new CustomEvent("toggleFooter"))}>
-          Toggle Footer
-        </Button>
       </Container>
     </Box>
   );

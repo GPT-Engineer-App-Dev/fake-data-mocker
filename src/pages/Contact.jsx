@@ -5,9 +5,6 @@ const Contact = () => {
   return (
     <Box p={4}>
       <Text fontSize="xl">Contact us at: info@example.com</Text>
-      <Button size="sm" onClick={() => window.dispatchEvent(new CustomEvent("toggleFooter"))}>
-        Toggle Footer
-      </Button>
     </Box>
   );
 };

@@ -5,9 +5,6 @@ const Services = () => {
   return (
     <Box p={4}>
       <Text fontSize="xl">Our Services</Text>
-      <Button size="sm" onClick={() => window.dispatchEvent(new CustomEvent("toggleFooter"))}>
-        Toggle Footer
-      </Button>
     </Box>
   );
 };

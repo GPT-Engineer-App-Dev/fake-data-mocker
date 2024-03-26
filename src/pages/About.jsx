@@ -5,9 +5,6 @@ const About = () => {
   return (
     <Box p={4}>
       <Text fontSize="xl">Welcome to the About page!</Text>
-      <Button size="sm" onClick={() => window.dispatchEvent(new CustomEvent("toggleFooter"))}>
-        Toggle Footer
-      </Button>
     </Box>
   );
 };
