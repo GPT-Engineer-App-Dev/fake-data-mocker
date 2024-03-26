@@ -25,9 +25,11 @@ function App() {
           <Route path="/services" element={<Services />} />
         </Routes>
         {showFooter && <Footer />}
-        <Button onClick={toggleFooter} position="absolute" bottom={4} left={4}>
-          {showFooter ? "Hide" : "Show"} Footer
-        </Button>
+        <Box position="absolute" bottom={4} left={4} zIndex="sticky">
+          <Button onClick={toggleFooter} colorScheme="blue">
+            {showFooter ? "Hide" : "Show"} Footer
+          </Button>
+        </Box>
       </Box>
     </Router>
   );
