@@ -11,9 +11,6 @@ import Footer from "./components/Footer.jsx";
 // Removed import of Button since it's no longer used directly in this file.
 
 function App() {
-  const [showFooter, setShowFooter] = useState(true);
-
-  const toggleFooter = () => setShowFooter(!showFooter);
   return (
     <Router>
       <Box>
@@ -24,12 +21,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
         </Routes>
-        {showFooter && <Footer />}
-        <Box position="absolute" bottom={4} left={4} zIndex="sticky">
-          <Button onClick={toggleFooter} colorScheme="blue">
-            {showFooter ? "Hide" : "Show"} Footer
-          </Button>
-        </Box>
       </Box>
     </Router>
   );
