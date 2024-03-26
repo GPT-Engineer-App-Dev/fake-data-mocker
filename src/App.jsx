@@ -4,13 +4,16 @@ import Contact from "./pages/Contact.jsx";
 import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
 import Navigation from "./components/Navigation.jsx";
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import Services from "./pages/Services.jsx";
 import Footer from "./components/Footer.jsx";
 
 // Removed import of Button since it's no longer used directly in this file.
 
 function App() {
+  const [showFooter, setShowFooter] = useState(true);
+
+  const toggleFooter = () => setShowFooter(!showFooter);
   return (
     <Router>
       <Box>
@@ -21,7 +24,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
         </Routes>
-        <Footer />
+        {showFooter && <Footer />}
+        <Button onClick={toggleFooter} position="absolute" bottom={4} left={4}>
+          {showFooter ? "Hide" : "Show"} Footer
+        </Button>
       </Box>
     </Router>
   );
