@@ -15,8 +15,8 @@ function App() {
     <Router>
       <Box>
         <Navigation />
-        <Button onClick={toggleFooter} m={4}>
-          {showFooter ? "Hide" : "Show"} Footer
+        <Button onClick={toggleFooter} m={4} colorScheme="blue" size="lg">
+          Click to {showFooter ? "Hide" : "Show"} Footer
         </Button>
         <Routes>
           <Route path="/" element={<Index />} />
