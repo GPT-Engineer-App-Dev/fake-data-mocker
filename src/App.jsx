@@ -7,7 +7,6 @@ import Services from "./pages/Services.jsx";
 import Navigation from "./components/Navigation.jsx";
 import Footer from "./components/Footer.jsx";
 import { Box, Button } from "@chakra-ui/react";
-
 function App() {
   const [showFooter, setShowFooter] = useState(true);
   const toggleFooter = () => setShowFooter(!showFooter);
